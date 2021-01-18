@@ -1,6 +1,8 @@
 #ifndef PATIENTDATA_H
 #define PATIENTDATA_H
 
+#include "Date.h"
+#include <string>
 using namespace std;
 
 class PatientData {
@@ -8,15 +10,19 @@ class PatientData {
 	private:
 
 		string patientName;
-		string patientDate;
-
+		string patientDoctor;
+		Date patientDate;
 
 	public:
 
-		void setPatientName(string patientName);
-		void setPatientDate(string patientName);
+		PatientData(string, string, Date);
+		PatientData();
+		void setPatientName(string);
+		void setPatientDoctor(string);
+		void setPatientDate(Date);
 		string getPatientName();
-		string getPatientDate();
+		string getPatientDoctor();
+		Date getPatientDate();
 
 
 };
